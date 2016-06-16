@@ -1,0 +1,34 @@
+﻿<Window x:Class="DepartmentHR.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:DepartmentHR.Views"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:prism="http://prismlibrary.com/"
+        Title="MainWindow"
+        Width="625"
+        Height="450"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        mc:Ignorable="d">
+    <Grid Background="Gray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Button Margin="5,5"
+                    Command="{Binding NavigateCommand}"
+                    CommandParameter="Employee"
+                    Content="Edit Employee" />
+        </Grid>
+
+        <ItemsControl Grid.Row="1" prism:RegionManager.RegionName="ContentRegion" />
+
+    </Grid>
+</Window>
