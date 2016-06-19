@@ -12,9 +12,10 @@ namespace DepartmentHR.Repositories
     {
         private readonly DataContext _context;
 
-        public HrRepository(DataContext context)
+        public HrRepository()//(DataContext context)
         {
-            _context = context;
+            //_context = context;
+            _context = new DataContext();
         }
 
         public async Task<bool> AddEmployee(Employee employee)
@@ -55,7 +56,7 @@ namespace DepartmentHR.Repositories
         {
             return await _context.Employee.ToListAsync();
         }
-
+        
         public async Task<IEnumerable<Employee>> GetEmployeesByGender(string gender)
         {
             return await _context.Employee.Where(e => e.Gender == gender).ToListAsync();

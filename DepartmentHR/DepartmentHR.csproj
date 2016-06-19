@@ -105,7 +105,7 @@
     <Compile Include="Interfaces\IHrService.cs" />
     <Compile Include="Repositories\HrRepository.cs" />
     <Compile Include="Services\HrService.cs" />
-    <Compile Include="ViewModels\EmployeeViewModel.cs" />
+    <Compile Include="ViewModels\EmployeesViewModel.cs" />
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
     <Page Include="Views\EmployeesView.xaml">
       <SubType>Designer</SubType>

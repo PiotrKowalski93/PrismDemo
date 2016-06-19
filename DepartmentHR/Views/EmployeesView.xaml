@@ -4,8 +4,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DepartmentHR.Views"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:prism="http://prismlibrary.com/"
              d:DesignHeight="400"
              d:DesignWidth="400"
+             prism:ViewModelLocator.AutoWireViewModel="True"
              mc:Ignorable="d">
     <Grid Background="Gray">
         <Grid.ColumnDefinitions>
@@ -14,21 +16,49 @@
         </Grid.ColumnDefinitions>
 
         <Grid Grid.Column="0">
-            <ListView Margin="5,5"
-                      ItemsSource="{Binding Employees}"
-                      SelectedItem="{Binding SelectedEmployee}" />
+            <Grid Height="350">
+                <ListView Margin="5,5"
+                          ItemsSource="{Binding Employees}"
+                          SelectedItem="{Binding SelectedEmployee}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock Text="{Binding NationalIDNumber}" />
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition />
-                <RowDefinition />
-                <RowDefinition />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
+                <RowDefinition Height="45" />
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
 
-            <Button Command="{Binding LoadEmployeesCommand}" Content="Load Employees" />
+            <Button Grid.Row="0"
+                    Height="35"
+                    Command="{Binding LoadEmployeesCommand}"
+                    Content="Load Employees" />
+
+            <Button Grid.Row="1"
+                    Height="35"
+                    Command="{Binding SaveEmployeeCommand}"
+                    Content="Save Employee"
+                    IsEnabled="{Binding IsEditEnable}" />
+
+            <Button Grid.Row="2"
+                    Height="35"
+                    Command="{Binding DeleteEmployeeCommand}"
+                    Content="Delete Employee"
+                    IsEnabled="{Binding IsEditEnable}" />
+
+
 
         </Grid>
 

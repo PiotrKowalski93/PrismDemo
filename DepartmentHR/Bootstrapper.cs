@@ -2,6 +2,10 @@
 using System.Windows;
 using Microsoft.Practices.Unity;
 using DepartmentHR.Views;
+using DepartmentHR.Interfaces;
+using DepartmentHR.Services;
+using DepartmentHR.Repositories;
+using DepartmentHR.Model;
 
 namespace DepartmentHR
 {
@@ -20,10 +24,12 @@ namespace DepartmentHR
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
-
-            //Container.RegisterType(typeof())
-
-            Container.RegisterTypeForNavigation<EmployeesView>("Employee");            
+                        
+            Container.RegisterType(typeof(IHrRepository), typeof(HrRepository));
+            Container.RegisterType(typeof(IHrService), typeof(HrService));
+            Container.RegisterType(typeof(DataContext), typeof(DataContext));
+            Container.RegisterType(typeof(object), typeof(EmployeesView), "Employee");
+            //Container.RegisterTypeForNavigation<EmployeesView>("Employee");            
         }        
     }
 

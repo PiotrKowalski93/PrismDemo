@@ -7,22 +7,42 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace DepartmentHR.ViewModels
 {
-    public class EmployeeViewModel : BindableBase, INotifyPropertyChanged
+    public class EmployeesViewModel : BindableBase, INotifyPropertyChanged
     {
         private readonly IHrService _hrService;
 
         public DelegateCommand LoadEmployeesCommand { get; set; }
-        
-        public EmployeeViewModel(IHrService hrService)
+        public DelegateCommand DeleteEmployeeCommand { get; set; }
+        public DelegateCommand SaveEmployeeCommand { get; set; }
+
+        public EmployeesViewModel(IHrService hrService)
         {
             _hrService = hrService;
 
-            LoadEmployeesCommand = new DelegateCommand(LoadEmployees);            
+            LoadEmployeesCommand = new DelegateCommand(LoadEmployees);
+            DeleteEmployeeCommand = new DelegateCommand(DeleteEmployee);
+            SaveEmployeeCommand = new DelegateCommand(SaveEmployee);
+        }
+
+        private void SaveEmployee()
+        {
+            Task.Run(async () =>
+            {
+                await _hrService.UpdateEmployee(SelectedEmployee);
+                Employees = (await _hrService.GetAllEmployees()).ToList();
+            });
+        }
+
+        private void DeleteEmployee()
+        {
+            Task.Run(async () =>
+            {
+                await _hrService.DeleteEmployee(SelectedEmployee.BusinessEntityID);
+            });
         }
 
         private void LoadEmployees()
@@ -30,7 +50,21 @@ namespace DepartmentHR.ViewModels
             Task.Run(async () =>
            {
                Employees = (await _hrService.GetAllEmployees()).ToList();
-           });            
+           });
+        }
+
+        private bool _isEditEnable;
+        public bool IsEditEnable
+        {
+            get
+            {
+                return _isEditEnable;
+            }
+            set
+            {
+                _isEditEnable = value;
+                NotifyPropertyChanged("IsEditEnable");
+            }
         }
 
         private List<Employee> _employees;
@@ -44,14 +78,15 @@ namespace DepartmentHR.ViewModels
             }
         }
 
-        private List<Employee> _selectedEmployee;
-        public List<Employee> SelectedEmployee
+        private Employee _selectedEmployee;
+        public Employee SelectedEmployee
         {
             get { return _selectedEmployee; }
             set
             {
                 _selectedEmployee = value;
                 NotifyPropertyChanged("Employees");
+                IsEditEnable = true;
             }
         }
 
