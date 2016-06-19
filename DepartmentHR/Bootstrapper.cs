@@ -2,7 +2,6 @@
 using System.Windows;
 using Microsoft.Practices.Unity;
 using DepartmentHR.Views;
-using Microsoft.Practices.Prism.Regions;
 
 namespace DepartmentHR
 {
@@ -21,6 +20,8 @@ namespace DepartmentHR
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
+
+            //Container.RegisterType(typeof())
 
             Container.RegisterTypeForNavigation<EmployeesView>("Employee");            
         }        

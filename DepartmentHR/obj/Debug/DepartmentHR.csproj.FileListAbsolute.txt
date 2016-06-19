@@ -9,12 +9,6 @@ C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\b
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\DepartmentHR.pdb
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\EntityFramework.dll
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Composition.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Interactivity.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Mvvm.Desktop.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Mvvm.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.PubSubEvents.dll
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.dll
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.ServiceLocation.dll
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Unity.Configuration.dll
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Unity.dll
@@ -26,10 +20,6 @@ C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\b
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\System.Windows.Interactivity.dll
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\EntityFramework.xml
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Composition.xml
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Interactivity.xml
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.Mvvm.xml
-C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Prism.SharedInterfaces.xml
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.ServiceLocation.pdb
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.ServiceLocation.xml
 C:\Users\Kowal\Documents\Visual Studio 2015\Projects\DepartmentHR\DepartmentHR\bin\Debug\Microsoft.Practices.Unity.xml
